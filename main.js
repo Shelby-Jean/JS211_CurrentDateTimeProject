@@ -5,21 +5,18 @@
 //          PART ONE
 // ***************************
 // Write a JavaScript program to display the current day and time, start with:
-console.log(new Date)
+console.log(new Date);
 
 const displayDate = () => {
-  const currentDate = new Date()
-
+  const currentDate = new Date();
   document.getElementById("display-element").innerHTML = currentDate;
 }
- 
 
 // Write a JavaScript program to convert a number to a string.
-
-
+const numToString = (num) => num.toString();
 
 // Write a JavaScript program to convert a string to the number.
-
+const stringToNum = (str) => parseInt(str);
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -29,15 +26,24 @@ const displayDate = () => {
   // * Number
   // * NaN
   // * String
-  
+  const getType = (arg) => typeof arg;
 
   
 // Write a JavaScript program that adds 2 numbers together.
+const addNums = (num1, num2) => num1 + num2;
 
+// const addNums = (num1, num2) => {
+//   return num1 + num2;
+// }
 
+// function addNums(num1, num2) {
+//   return num1 + num2;
+// }
 
 // Write a JavaScript program that runs only when 2 things are true.
-
+// const twoTru = (a, b) => {
+//   if(a = 1)
+// }
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
