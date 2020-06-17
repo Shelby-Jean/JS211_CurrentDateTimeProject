@@ -41,16 +41,29 @@ const addNums = (num1, num2) => num1 + num2;
 // }
 
 // Write a JavaScript program that runs only when 2 things are true.
-// const twoTru = (a, b) => {
-//   if(a = 1)
-// }
-
+const bothTru = (a, b) => {
+  if(a === 3 && b === 4) {
+    console.log('Both are TRUE');
+  }
+}
+bothTru(3, 4);
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
-
-
+const oneTru = (a, b) => {
+  if(a === 3 || b === 1) {
+    console.log('One of these is TRUE');
+  }
+}
+oneTru(3, 0);
 
 // Write a JavaScript program that runs when both things are not true.  
+const noTru = (a, b) => {
+  if(a !== 1 && b !== 2) {
+    console.log('Neither of these is TRUE');
+  }
+}
+noTru(-1, -2);
+
 
 // ***************************
 //         PART TWO
