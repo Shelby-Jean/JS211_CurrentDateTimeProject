@@ -36,7 +36,7 @@ const addNums = () => {
   document.getElementById("display-sum").innerHTML = num1 + num2;
 }
 
-
+//Other function examples
 // const addNums = (num1, num2) => {
 //   return num1 + num2;
 // }
@@ -71,12 +71,13 @@ const noTru = (a, b) => {
 const posOrNeg = () => {
   let a = parseInt(document.getElementById("valueA").value);
   let b = parseInt(document.getElementById("valueB").value);
+  let result = document.getElementById("display-value");
   if(a >= 0 && b >= 0){
-    document.getElementById("display-value").innerHTML = 'Both numbers are positive.';
+    result.innerHTML = 'Both numbers are positive.';
     } else if (a >= 0 || b >= 0) {
-      document.getElementById("display-value").innerHTML = 'One number is positive.';
+      result.innerHTML = 'One number is positive.';
     } else {
-      document.getElementById("display-value").innerHTML = 'Neither number is positive.';
+      result.innerHTML = 'Neither number is positive.';
     }
 }
 
