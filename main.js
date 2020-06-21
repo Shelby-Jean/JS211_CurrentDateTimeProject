@@ -26,11 +26,16 @@ const stringToNum = (str) => parseInt(str);
   // * Number
   // * NaN
   // * String
-  const getType = (arg) => typeof arg;
+const getType = (arg) => typeof arg;
 
   
 // Write a JavaScript program that adds 2 numbers together.
-const addNums = (num1, num2) => num1 + num2;
+const addNums = () => {
+  let num1 = parseInt(document.getElementById("first-number").value);
+  let num2 = parseInt(document.getElementById("second-number").value);
+  document.getElementById("display-sum").innerHTML = num1 + num2;
+}
+
 
 // const addNums = (num1, num2) => {
 //   return num1 + num2;
@@ -42,11 +47,10 @@ const addNums = (num1, num2) => num1 + num2;
 
 // Write a JavaScript program that runs only when 2 things are true.
 const bothTru = (a, b) => {
-  if(a === 3 && b === 4) {
+  if(a && b) {
     console.log('Both are TRUE');
   }
 }
-bothTru(3, 4);
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 const oneTru = (a, b) => {
@@ -54,7 +58,6 @@ const oneTru = (a, b) => {
     console.log('One of these is TRUE');
   }
 }
-oneTru(3, 0);
 
 // Write a JavaScript program that runs when both things are not true.  
 const noTru = (a, b) => {
@@ -62,7 +65,20 @@ const noTru = (a, b) => {
     console.log('Neither of these is TRUE');
   }
 }
-noTru(-1, -2);
+
+
+// Using pieces of the 3 above functions to make a new function for part 2.
+const posOrNeg = () => {
+  let a = parseInt(document.getElementById("valueA").value);
+  let b = parseInt(document.getElementById("valueB").value);
+  if(a >= 0 && b >= 0){
+    document.getElementById("display-value").innerHTML = 'Both numbers are positive.';
+    } else if (a >= 0 || b >= 0) {
+      document.getElementById("display-value").innerHTML = 'One number is positive.';
+    } else {
+      document.getElementById("display-value").innerHTML = 'Neither number is positive.';
+    }
+}
 
 
 // ***************************

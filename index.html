@@ -9,7 +9,24 @@
     <h1>Hello World!</h1>
     <hr/>
     <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
+    <button onclick="displayDate()">Click Me for Date</button>
     <hr/>
+    <form>
+      <label for="first-number">First Number:</label>
+      <input type="number" id="first-number" name="first-number">
+      <label for="second-number">Second Number:</label>
+      <input type="number" id="second-number" name="second-number">
+      <button type="button" name="add" onclick="addNums()">Add</button>
+      <div id="display-sum"></div>
+    </form>
+    <hr/>
+    <form>
+      <label for="first-value">First Value:</label>
+      <input type="number" id="valueA" name="first-value">
+      <label for="second-value">Second Value:</label>
+      <input type="number" id="valueB" name="second-value">
+      <button type="button" name="pos-or-neg" onclick="posOrNeg()">Positive or Negative?</button>
+      <div id="display-value"></div>
+    </form>
   </body>
 </html>
