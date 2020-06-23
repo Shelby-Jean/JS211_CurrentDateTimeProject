@@ -28,8 +28,27 @@ const stringToNum = (str) => parseInt(str);
   // * String
 const getType = (arg) => typeof arg;
 
+// For part 2.
+const showDefinitions = () => {
+  let dropdown = document.getElementById("data-types").selectedIndex;
+  let definition = document.getElementById("definition");
+  if(dropdown == 0) {
+    definition.innerHTML = 'Boolean represents a logical entity and can have two values: true and false.';
+  } else if(dropdown == 1) {
+    definition.innerHTML = 'The Number type is a double-precision 64-bit binary format IEEE 754 value (numbers between -(253 − 1) and 253 − 1). In addition to representing floating-point numbers, the number type has three symbolic values: +Infinity, -Infinity, and NaN ("Not a Number").';
+  } else if(dropdown == 2) {
+    definition.innerHTML = 'JavaScript\'s String type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values. Each element in the String occupies a position in the String. The first element is at index 0, the next at index 1, and so on. The length of a String is the number of elements in it.';
+  } else if(dropdown == 3) {
+    definition.innerHTML = 'A function is a code snippet that can be called by other code or by itself, or a variable that refers to the function. When a function is called, arguments are passed to the function as input, and the function can optionally return a value. A function in JavaScript is also an object.';
+  } else if(dropdown == 4) {
+    definition.innerHTML = 'In JavaScript, objects can be seen as a collection of properties. With the object literal syntax, a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using key values. A key value is either a String or a Symbol value.';
+  } else if(dropdown == 5) {
+    definition.innerHTML = 'A variable that has not been assigned a value has the value undefined.';
+  } 
+}
+
   
-// Write a JavaScript program that adds 2 numbers together.
+// Write a JavaScript program that adds 2 numbers together. Used for part 2.
 const addNums = () => {
   let num1 = parseInt(document.getElementById("first-number").value);
   let num2 = parseInt(document.getElementById("second-number").value);
