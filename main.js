@@ -13,10 +13,22 @@ const displayDate = () => {
 }
 
 // Write a JavaScript program to convert a number to a string.
-const numToString = (num) => num.toString();
+const numToString = () => {
+  let input1 = document.getElementById("number").value;
+  // console.log(typeof input1);
+  const num = parseInt(input1);
+  // console.log(typeof num);
+  const str = num.toString();
+  // console.log(typeof str);
+  document.getElementById("num-to-string").innerHTML = `${str} was converted from a number to a string.`;
+}
 
 // Write a JavaScript program to convert a string to the number.
-const stringToNum = (str) => parseInt(str);
+const stringToNum = () => {
+  let input2 = parseInt(document.getElementById("string").value);
+  // console.log(typeof input2);
+  document.getElementById("string-to-num").innerHTML = `${input2} was a string and is now a number.`;
+}
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -26,29 +38,28 @@ const stringToNum = (str) => parseInt(str);
   // * Number
   // * NaN
   // * String
-const getType = (arg) => typeof arg;
-
-// For part 2.
-const showDefinitions = () => {
-  let dropdown = document.getElementById("data-types").selectedIndex;
-  let definition = document.getElementById("definition");
-  if(dropdown == 0) {
-    definition.innerHTML = 'Boolean represents a logical entity and can have two values: true and false.';
-  } else if(dropdown == 1) {
-    definition.innerHTML = 'The Number type is a double-precision 64-bit binary format IEEE 754 value (numbers between -(253 − 1) and 253 − 1). In addition to representing floating-point numbers, the number type has three symbolic values: +Infinity, -Infinity, and NaN ("Not a Number").';
-  } else if(dropdown == 2) {
-    definition.innerHTML = 'JavaScript\'s String type is used to represent textual data. It is a set of "elements" of 16-bit unsigned integer values. Each element in the String occupies a position in the String. The first element is at index 0, the next at index 1, and so on. The length of a String is the number of elements in it.';
-  } else if(dropdown == 3) {
-    definition.innerHTML = 'A function is a code snippet that can be called by other code or by itself, or a variable that refers to the function. When a function is called, arguments are passed to the function as input, and the function can optionally return a value. A function in JavaScript is also an object.';
-  } else if(dropdown == 4) {
-    definition.innerHTML = 'In JavaScript, objects can be seen as a collection of properties. With the object literal syntax, a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using key values. A key value is either a String or a Symbol value.';
-  } else if(dropdown == 5) {
-    definition.innerHTML = 'A variable that has not been assigned a value has the value undefined.';
-  } 
+const getType = () => {
+  let input3 = document.getElementById("data-types").value;
+  let displayInput = document.getElementById("display-type");
+  if(typeof input3 === 'boolean') {
+    displayInput.innerHTML = 'boolean';
+  } else if(typeof input3 === 'null') {
+    displayInput.innerHTML = 'null';
+  } else if(typeof input3 === 'undefined') {
+    displayInput.innerHTML = 'undefined';
+  } else if(typeof input3 === 'number') {
+    displayInput.innerHTML = 'number';
+  } else if(typeof input3 === 'NaN') {
+    displayInput.innerHTML = 'NaN';
+  } else if(typeof input3 === 'string') {
+    displayInput.innerHTML = 'string';
+  } else {
+    displayInput.innerHTML = 'other';
+  }
 }
 
   
-// Write a JavaScript program that adds 2 numbers together. Used for part 2.
+// Write a JavaScript program that adds 2 numbers together. Also used for part 2.
 const addNums = () => {
   let num1 = parseInt(document.getElementById("first-number").value);
   let num2 = parseInt(document.getElementById("second-number").value);
